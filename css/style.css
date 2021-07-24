@@ -361,7 +361,7 @@ ul {
 /*  Постоянные клиенты */
 .clients-logo {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 .clients-logo .item {
   display: inline-block;
