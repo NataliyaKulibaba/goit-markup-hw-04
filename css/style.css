@@ -11,7 +11,7 @@
   padding-right: 15px;
   margin: 0 auto;
   }
-.list {
+.list, li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -128,7 +128,7 @@ display: block;
   content: '';
   height: 12px;
   width: 16px;
-  background-image: url(../svg/envelope.svg);
+  background-image: url(../images/svg/envelope.svg);
   background-repeat: no-repeat;
   margin-right: 10px;
   color: var(--primary-text-color);
@@ -138,7 +138,7 @@ display: block;
   content: '';
   height: 16px;
   width: 10px;
-  background-image: url(../svg/smartphone.svg);
+  background-image: url(../images/svg/smartphone.svg);
   background-repeat: no-repeat;
   margin-right: 10px;
   }
@@ -147,14 +147,12 @@ display: block;
   display: flex;
   align-items: center;
 }
-/* .item.mail::before:hover,
-.item.mail::before:focus,
-.item.tel::before:hover,
-.item.tel::before:focus {
-   color: var(--accent-color);
-} */
-
-
+.link-icon.nav {
+  margin-right: 10px;
+}
+.link-icon.nav:hover {
+fill: var(--accent-color);
+}
 
 
 /* Герой */
@@ -261,45 +259,27 @@ display: block;
   margin-right: 30px;
 }
 
-.advantages.list .item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-color: #F5F4FA;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
-  padding: 25px 100px;
+.thumb {
+ background-color: #F5F4FA; 
+ height: 120px;
+ margin-bottom: 30px;
+ padding: 25px 100px;
 }
-.icon-antena::before {
-  background-image: url(../svg/antenna\ 1.svg);
-   } 
-.icon-clock::before {
-  background-image: url(../svg/clock\ 1.svg);
+.advantages-icon {
+  width: 70px;
+  height: 70px;
 }
-  /* width: 70px;
-  height: 70px; */
 
-.icon-diagram::before {
-  background-image: url(../svg/antenna\ 1.svg);
-  /* width: 70px;
-  height: 70px; */
-}
-.icon-astronaut::before {
-  background-image: url(../svg/astronaut\ 1.svg);
-  /* width: 70px;
-  height: 70px; */
-} 
 
 /* Чем мы занимаемся */
 
-.works-list {
+.works.list {
   display: flex;
 }
-.works-list .item {
+.works.list .item {
   margin-right: 30px;
 }
-.works-list .item:nth-child(3) {
+.works.list .item:nth-child(3) {
   margin-right: 0px;
 }
 ul {
@@ -322,18 +302,18 @@ ul {
 
 .command-text {
   display: inline-block;
-  /* margin-top: 0px; */
+  /* margin-bottom: 16px; */
  
   color: var(--primary-text-color);
 
   font-size: 16px;
   line-height: 1.19px;
   }
-/* .container.command {
-  margin-bottom: 0px;
-} */
+
 .command.list {
   display: flex;
+  width: 270px;
+  height: 428px;
 }
 .command.list .item {
   margin-right: 30px;
@@ -355,30 +335,71 @@ ul {
 .command-description {
   padding-top: 30px;
   padding-bottom: 30px;
-  
+}
+.command-actions {
+  display: flex;
+  width: 206px;
+  height: 44px;
+  justify-content: space-around;
+  margin: 16px 32px 30px;
+  align-items: center;
+}
+.link-icon{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  width: 20px;
+  height: 20px;
+  fill: #AFB1B8;
+}
+.link-icon:hover {
+fill: #ffffff;
 }
 
+.command.social  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  width: 44px;
+  height: 44px;
+ cursor: pointer;
+  
+}
+.command.social:hover {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+    }
+  
 /*  Постоянные клиенты */
 .clients-logo {
   display: flex;
   justify-content:space-between;
+  
+
 }
-.clients-logo .item {
-  display: inline-block;
-  width: 170px;
+.clients-logo .clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-item {
+width: 170px;
   height: 92px;
   padding: 16px 32px;
   border: 1px solid #AFB1B8;
   border-radius: 3px;
-
 }
-/* .clients-logo .item:not(:last-child) {
-  margin-right: 30px;
-} */
+.clients-icon {
+  width: 106px;
+  height: 60px;
+}
+
+
+
 
 /* Футер */
 .section.contacts {
   background-color: #2f303a;
+  w
   }
 .section.contacts {
   padding-top: 60px;
@@ -408,3 +429,39 @@ ul {
 .contacts-link:focus {
   color: var(--accent-color);
 }
+.join {
+  line-height: 1.14;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+  }
+.container.contacts {
+  display: flex;
+}
+.join-box {
+  margin-left: 70px;
+  width: 206px;
+  height: 80px;
+}
+.join-item {
+    display: flex;
+    width: 206px;
+    height: 44px;
+    justify-content: space-between;
+    /* margin: 16px 32px 30px; */
+    align-items: center;
+
+}
+.join-item .link-icon {
+  fill:var(--primary-white-color);
+}
+
+/* .item-link  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill-opacity:0.1;
+  width: 44px;
+  height: 44px;
+ cursor: pointer; */
