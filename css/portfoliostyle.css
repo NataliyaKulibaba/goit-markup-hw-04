@@ -4,6 +4,11 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
 }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 .container {
   width: 1200px;
   padding-left: 15px;
