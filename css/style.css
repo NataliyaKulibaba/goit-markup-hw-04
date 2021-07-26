@@ -19,11 +19,6 @@
 html {
   box-sizing: border-box;
 }
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
 
 body {
   margin: 0;
@@ -48,10 +43,13 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 /* Шапка сайта */
+
 header {
   border-bottom: 1px solid #eeeeee);
 }
+
 .logo {
   display: block;
   margin-right: 93px;
@@ -74,14 +72,17 @@ header {
 }
 
 /* навигация */
+
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .site-nav {
   display: flex;
 }
+
 .site-nav .item + .item {
   margin-left: 50px;
 }
@@ -97,19 +98,24 @@ header {
   letter-spacing: 0.02em;
   line-height: 1.14;
 }
+
 .auth-nav .item + .item {
   margin-left: 50px;
 }
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
 }
+
 .auth-nav {
   display: flex;
   margin-left: auto;
 }
+
 .auth-nav .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -119,49 +125,33 @@ header {
   letter-spacing: 0.02em;
   line-height: 1.14;
 }
+
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
 }
-.auth-nav .item.mail::before {
-display: block;
-  content: '';
-  height: 12px;
-  width: 16px;
-  background-image: url(../images/svg/envelope.svg);
-  background-repeat: no-repeat;
-  margin-right: 10px;
-  color: var(--primary-text-color);
-    }
-  .auth-nav .item.tel::before {
-display: block;
-  content: '';
-  height: 16px;
-  width: 10px;
-  background-image: url(../images/svg/smartphone.svg);
-  background-repeat: no-repeat;
-  margin-right: 10px;
-  }
+
 .item.mail,
 .item.tel {
   display: flex;
   align-items: center;
 }
+
 .link-icon.nav {
   margin-right: 10px;
 }
+
 .link-icon.nav:hover {
 fill: var(--accent-color);
 }
 
-
 /* Герой */
 
 .hero {
-  display: block;
-  margin: 0 auto;
+ display: block;
+ margin: 0 auto;
 
-  background-color: #2f303a;
+ background-color: #2f303a;
   height: 600px;
   
   text-align: center;
@@ -172,11 +162,10 @@ fill: var(--accent-color);
      rgba(47, 48, 58, 0.4)
      ),
       url(../images/hero\ \(1\).jpg);
-   /* background-image: url(../images/hero\ \(1\).jpg); */
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
 .hero-title {
   display: inline-block;
   margin-top: 200px;
@@ -187,12 +176,12 @@ fill: var(--accent-color);
   color: var(--primary-white-color);
 
   width: 696px;
-    font-weight: 900;
+  font-weight: 900;
   letter-spacing: 0.06em;
   font-size: 44px;
   line-height: 1.36;
   text-transform: uppercase;
-  }
+}
 
 .button {
   display: block;
@@ -201,14 +190,13 @@ fill: var(--accent-color);
   padding: 10px 32px;
   margin: 0 auto;
   
-
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   font-family: inherit;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 6px;
-  }
+}
 
 .hero .text {
   color: var(--primary-white-color);
@@ -218,19 +206,23 @@ fill: var(--accent-color);
   font-size: 16px;
   line-height: 1.87px;
 }
+
 .section-title.advantages {
   visibility: hidden;
   display: none;
 }
 
 /*  Секция Преимущества */
+
 .section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
+
 .section.advantages {
   padding-bottom: 0;
 }
+
 .section-title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -241,84 +233,91 @@ fill: var(--accent-color);
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  }
+}
+
 .advantages.list {
   display: flex;
 }
+
 .advantages-title {
   margin-bottom: 10px;
 
   color: var(--title-text-color);
 }
+
 .advantages.list .item {
   display: block;
   width: 270px;
-  
 }
+
 .advantages.list .item:not(:last-child) {
   margin-right: 30px;
 }
 
 .thumb {
  background-color: #F5F4FA; 
- height: 120px;
  margin-bottom: 30px;
  padding: 25px 100px;
 }
+
 .advantages-icon {
   width: 70px;
   height: 70px;
 }
-
 
 /* Чем мы занимаемся */
 
 .works.list {
   display: flex;
 }
+
 .works.list .item {
   margin-right: 30px;
 }
+
 .works.list .item:nth-child(3) {
   margin-right: 0px;
 }
+
 ul {
   padding: 0;
 }
+
 /* Наша команда */
 
 .section.command {
   background-color: #f5f4fa;
 }
+
 .command-title {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
   color: var(--title-text-color);
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  }
-
+}
+  
 .command-text {
   display: inline-block;
-  /* margin-bottom: 16px; */
- 
+  
   color: var(--primary-text-color);
 
   font-size: 16px;
-  line-height: 1.19px;
-  }
+  line-height: 1.19;
+  margin-bottom: 16px;
+}
 
 .command.list {
   display: flex;
-  width: 270px;
   height: 428px;
 }
+
 .command.list .item {
   margin-right: 30px;
 
-   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   border-bottom-right-radius: 5px;
@@ -327,100 +326,111 @@ ul {
   background-color: var(--primary-white-color);
 
   text-align: center;
- 
 }
+
 .command.list .item:nth-child(4) {
   margin-right: 0;
 }
-.command-description {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+
 .command-actions {
   display: flex;
   width: 206px;
   height: 44px;
   justify-content: space-around;
-  margin: 16px 32px 30px;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
-}
-.link-icon{
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  width: 20px;
-  height: 20px;
-  fill: #AFB1B8;
-}
-.link-icon:hover {
-fill: #ffffff;
+  padding:0;
 }
 
-.command.social  {
+.link-icon{
+   width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.command.link {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: inherit;
+  cursor: pointer;
   width: 44px;
   height: 44px;
- cursor: pointer;
-  
-}
-.command.social:hover {
-  background-color: var(--accent-color);
+  background-color: inherit;
+  cursor: pointer;
+  color: #AFB1B8;
   border-radius: 50%;
-    }
-  
+  padding: 0;
+  border: none;
+}
+ 
+.command.link:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.command.item>img {
+  margin-bottom: 30px;
+}
+
 /*  Постоянные клиенты */
+
 .clients-logo {
   display: flex;
   justify-content:space-between;
-  
+ }
 
-}
 .clients-logo .clients-item:not(:last-child) {
   margin-right: 30px;
 }
+
 .clients-item {
-width: 170px;
+  width: 170px;
   height: 92px;
   padding: 16px 32px;
+  color:#AFB1B8;
   border: 1px solid #AFB1B8;
   border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.clients-item:hover,
+.clients-item:focus {
+  border: 1px solid  var(--accent-color); 
+  color: var(--accent-color);
+}
+
 .clients-icon {
-  width: 106px;
-  height: 60px;
+  fill:  currentColor
 }
-
-
-
 
 /* Футер */
+
 .section.contacts {
   background-color: #2f303a;
-  w
-  }
+}
+
 .section.contacts {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .section.contacts .address {
   display: flex;
   margin-top: 20px;
 
   flex-direction: column;
   font-style: normal;
-  }
-.address .item {
-  color: var(--primary-white-color);
 }
-.contacts .logo-studio {
-  color: var(--primary-white-color);
-}
+
+.address .item,
+.contacts .logo-studio,
 .address.link {
   color: var(--primary-white-color);
 }
+
 .contacts-link {
   color: rgba(255, 255, 255, 0.6);
 }
@@ -429,6 +439,7 @@ width: 170px;
 .contacts-link:focus {
   color: var(--accent-color);
 }
+
 .join {
   line-height: 1.14;
   font-weight: 700;
@@ -436,32 +447,47 @@ width: 170px;
   color: var(--primary-white-color);
   margin-bottom: 20px;
   }
+
 .container.contacts {
   display: flex;
 }
+
 .join-box {
   margin-left: 70px;
   width: 206px;
   height: 80px;
 }
-.join-item {
-    display: flex;
-    width: 206px;
-    height: 44px;
-    justify-content: space-between;
-    /* margin: 16px 32px 30px; */
-    align-items: center;
 
+.join-item {
+  display: flex;
+  width: 206px;
+  height: 44px;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .join-item .link-icon {
   fill:var(--primary-white-color);
 }
 
-/* .item-link  {
+.join-fon {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill-opacity:0.1;
+  background-color: rgba(255, 255, 255, 0.1);
   width: 44px;
   height: 44px;
- cursor: pointer; */
+  cursor: pointer;
+  border-radius: 50%;;
+}
+
+.join-fon:hover,
+.join-fon:focus {
+  background-color: var(--accent-color);
+}
+
+.item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
