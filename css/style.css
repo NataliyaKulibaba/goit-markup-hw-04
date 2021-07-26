@@ -241,7 +241,7 @@ fill: var(--accent-color);
 
 .advantages-title {
   margin-bottom: 10px;
-
+  text-transform:uppercase;
   color: var(--title-text-color);
 }
 
