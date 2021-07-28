@@ -47,6 +47,16 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
 /* Шапка сайта */
 
@@ -143,11 +153,13 @@ header {
 
 .link-icon.nav {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .link-icon.nav:hover {
 fill: var(--accent-color);
 }
+
 
 /* Герой */
 
@@ -249,19 +261,17 @@ fill: var(--accent-color);
   color: var(--title-text-color);
 }
 
-.advantages.list .item {
-  display: block;
-  width: 270px;
-}
 
-.advantages.list .item:not(:last-child) {
+.advantages-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.thumb {
+.advantages-thumb {
  background-color: #F5F4FA; 
  margin-bottom: 30px;
- padding: 25px 100px;
+ padding: 25px 0;
+ display: flex;
+ justify-content: center;
 }
 
 .advantages-icon {
@@ -283,9 +293,7 @@ fill: var(--accent-color);
   margin-right: 0px;
 }
 
-ul {
-  padding: 0;
-}
+
 
 /* Наша команда */
 
@@ -302,6 +310,10 @@ ul {
   font-size: 16px;
   line-height: 1.19;
 }
+
+.command-description {
+  padding: 30px 0;
+}
   
 .command-text {
   display: inline-block;
@@ -315,8 +327,7 @@ ul {
 
 .command.list {
   display: flex;
-  height: 428px;
-}
+ }
 
 .command.list .item {
   margin-right: 30px;
@@ -338,66 +349,51 @@ ul {
 
 .command-actions {
   display: flex;
-  width: 206px;
-  height: 44px;
-  justify-content: space-around;
+  justify-content: center;
   margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  padding:0;
 }
 
-.link-icon{
-   width: 20px;
+.command-link .link-icon{
+  width: 20px;
   height: 20px;
   fill: currentColor;
 }
 
-.command.link {
+.command-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   width: 44px;
   height: 44px;
-  background-color: inherit;
-  cursor: pointer;
   color: #AFB1B8;
-  border-radius: 50%;
-  padding: 0;
-  border: none;
-}
- 
-.command.link:hover {
-  background-color: var(--accent-color);
-  color: #ffffff;
 }
 
-.command.item>img {
-  margin-bottom: 30px;
+ 
+.command-link:hover,
+.command-link:focus{
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-radius: 50%;
 }
 
 /*  Постоянные клиенты */
 
-.clients-logo {
+.section-logo {
   display: flex;
   justify-content:space-between;
  }
 
-.clients-logo .clients-item:not(:last-child) {
+.section-logo .section-logo:not(:last-child) {
   margin-right: 30px;
 }
 
 .clients-item {
-  width: 170px;
-  height: 92px;
   padding: 16px 32px;
   color:#AFB1B8;
   border: 1px solid #AFB1B8;
   border-radius: 3px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+ 
 }
 
 .clients-item:hover,
@@ -407,16 +403,17 @@ ul {
 }
 
 .clients-icon {
-  fill:  currentColor
+  width: 106px;
+  height: 60px;
+  fill:  currentColor;
+  justify-content: center;
 }
+
 
 /* Футер */
 
 .section.contacts {
   background-color: #2f303a;
-}
-
-.section.contacts {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -427,6 +424,9 @@ ul {
 
   flex-direction: column;
   font-style: normal;
+}
+.container.contacts {
+  display: flex;
 }
 
 .address .item,
@@ -452,46 +452,34 @@ ul {
   margin-bottom: 20px;
   }
 
-.container.contacts {
-  display: flex;
-}
-
 .join-box {
   margin-left: 70px;
   width: 206px;
-  height: 80px;
 }
 
 .join-item {
   display: flex;
-  width: 206px;
-  height: 44px;
   justify-content: space-between;
-  align-items: center;
-}
+  }
 
-.join-item .link-icon {
+.link-icon {
   fill:var(--primary-white-color);
-}
-
-.join-fon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  border-radius: 50%;;
-}
-
-.join-fon:hover,
-.join-fon:focus {
-  background-color: var(--accent-color);
+  width: 20px;
+  height: 20px;
 }
 
 .item-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;;
 }
+
+.item-link:hover,
+.item-link:focus {
+background-color: var(--accent-color);
+}
+
